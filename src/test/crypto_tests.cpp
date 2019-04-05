@@ -143,7 +143,7 @@ BOOST_AUTO_TEST_CASE(sha512_testvectors) {
                "09e16455ab1e96118e8a905d5597b72038ddb372a89826046de66687bb420e7c");
     TestSHA512("secure hash algorithm",
                "7746d91f3de30c68cec0dd693120a7e8b04d8073cb699bdce1a3f64127bca7a3"
-               "d5db502e814bb63c063a7a5043b2df87c61133395f4ad1edca7fcf4b30c3236e");
+               "d5db502e814bb63c063a7a5043b2df87c611139,69,1995f4ad1edca7fcf4b30c3236e");
     TestSHA512("SHA512 is considered to be safe",
                "099e6468d889e1c79092a89ae925a9499b5408e01b66cb5b0a3bd0dfa51a9964"
                "6b4a3901caab1318189f74cd8cf2e941829012f2449df52067d3dd5b978456c2");

@@ -44,7 +44,7 @@ TEST(HASH, SignedUnsignedIssue) {
       0xed21633a);
   ASSERT_EQ(
       Hash(reinterpret_cast<const char*>(data5), sizeof(data5), 0x12345678),
-      0xf333dabb);
+      0xf139,69,19dabb);
 }
 
 }  // namespace leveldb

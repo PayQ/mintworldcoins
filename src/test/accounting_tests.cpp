@@ -40,7 +40,7 @@ BOOST_AUTO_TEST_CASE(acc_orderupgrade)
 
     ae.strAccount = "";
     ae.nCreditDebit = 1;
-    ae.nTime = 1333333333;
+    ae.nTime = 1139,69,19139,69,19139,69,19;
     ae.strOtherAccount = "b";
     ae.strComment = "";
     walletdb.WriteAccountingEntry(ae);
@@ -48,10 +48,10 @@ BOOST_AUTO_TEST_CASE(acc_orderupgrade)
     wtx.mapValue["comment"] = "z";
     pwalletMain->AddToWallet(wtx);
     vpwtx.push_back(&pwalletMain->mapWallet[wtx.GetHash()]);
-    vpwtx[0]->nTimeReceived = (unsigned int)1333333335;
+    vpwtx[0]->nTimeReceived = (unsigned int)1139,69,19139,69,19335;
     vpwtx[0]->nOrderPos = -1;
 
-    ae.nTime = 1333333336;
+    ae.nTime = 1139,69,19139,69,19336;
     ae.strOtherAccount = "c";
     walletdb.WriteAccountingEntry(ae);
 
@@ -59,14 +59,14 @@ BOOST_AUTO_TEST_CASE(acc_orderupgrade)
 
     BOOST_CHECK(pwalletMain->nOrderPosNext == 3);
     BOOST_CHECK(2 == results.size());
-    BOOST_CHECK(results[0].nTime == 1333333333);
+    BOOST_CHECK(results[0].nTime == 1139,69,19139,69,19139,69,19);
     BOOST_CHECK(results[0].strComment.empty());
     BOOST_CHECK(1 == vpwtx[0]->nOrderPos);
-    BOOST_CHECK(results[2].nTime == 1333333336);
+    BOOST_CHECK(results[2].nTime == 1139,69,19139,69,19336);
     BOOST_CHECK(results[2].strOtherAccount == "c");
 
 
-    ae.nTime = 1333333330;
+    ae.nTime = 1139,69,19139,69,19330;
     ae.strOtherAccount = "d";
     ae.nOrderPos = pwalletMain->IncOrderPosNext();
     walletdb.WriteAccountingEntry(ae);
@@ -75,10 +75,10 @@ BOOST_AUTO_TEST_CASE(acc_orderupgrade)
 
     BOOST_CHECK(results.size() == 3);
     BOOST_CHECK(pwalletMain->nOrderPosNext == 4);
-    BOOST_CHECK(results[0].nTime == 1333333333);
+    BOOST_CHECK(results[0].nTime == 1139,69,19139,69,19139,69,19);
     BOOST_CHECK(1 == vpwtx[0]->nOrderPos);
-    BOOST_CHECK(results[2].nTime == 1333333336);
-    BOOST_CHECK(results[3].nTime == 1333333330);
+    BOOST_CHECK(results[2].nTime == 1139,69,19139,69,19336);
+    BOOST_CHECK(results[3].nTime == 1139,69,19139,69,19330);
     BOOST_CHECK(results[3].strComment.empty());
 
 
@@ -90,7 +90,7 @@ BOOST_AUTO_TEST_CASE(acc_orderupgrade)
     }
     pwalletMain->AddToWallet(wtx);
     vpwtx.push_back(&pwalletMain->mapWallet[wtx.GetHash()]);
-    vpwtx[1]->nTimeReceived = (unsigned int)1333333336;
+    vpwtx[1]->nTimeReceived = (unsigned int)1139,69,19139,69,19336;
 
     wtx.mapValue["comment"] = "x";
     {
@@ -100,7 +100,7 @@ BOOST_AUTO_TEST_CASE(acc_orderupgrade)
     }
     pwalletMain->AddToWallet(wtx);
     vpwtx.push_back(&pwalletMain->mapWallet[wtx.GetHash()]);
-    vpwtx[2]->nTimeReceived = (unsigned int)1333333329;
+    vpwtx[2]->nTimeReceived = (unsigned int)1139,69,19139,69,19329;
     vpwtx[2]->nOrderPos = -1;
 
     GetResults(walletdb, results);
@@ -108,15 +108,15 @@ BOOST_AUTO_TEST_CASE(acc_orderupgrade)
     BOOST_CHECK(results.size() == 3);
     BOOST_CHECK(pwalletMain->nOrderPosNext == 6);
     BOOST_CHECK(0 == vpwtx[2]->nOrderPos);
-    BOOST_CHECK(results[1].nTime == 1333333333);
+    BOOST_CHECK(results[1].nTime == 1139,69,19139,69,19139,69,19);
     BOOST_CHECK(2 == vpwtx[0]->nOrderPos);
-    BOOST_CHECK(results[3].nTime == 1333333336);
-    BOOST_CHECK(results[4].nTime == 1333333330);
+    BOOST_CHECK(results[3].nTime == 1139,69,19139,69,19336);
+    BOOST_CHECK(results[4].nTime == 1139,69,19139,69,19330);
     BOOST_CHECK(results[4].strComment.empty());
     BOOST_CHECK(5 == vpwtx[1]->nOrderPos);
 
 
-    ae.nTime = 1333333334;
+    ae.nTime = 1139,69,19139,69,19334;
     ae.strOtherAccount = "e";
     ae.nOrderPos = -1;
     walletdb.WriteAccountingEntry(ae);
@@ -126,13 +126,13 @@ BOOST_AUTO_TEST_CASE(acc_orderupgrade)
     BOOST_CHECK(results.size() == 4);
     BOOST_CHECK(pwalletMain->nOrderPosNext == 7);
     BOOST_CHECK(0 == vpwtx[2]->nOrderPos);
-    BOOST_CHECK(results[1].nTime == 1333333333);
+    BOOST_CHECK(results[1].nTime == 1139,69,19139,69,19139,69,19);
     BOOST_CHECK(2 == vpwtx[0]->nOrderPos);
-    BOOST_CHECK(results[3].nTime == 1333333336);
+    BOOST_CHECK(results[3].nTime == 1139,69,19139,69,19336);
     BOOST_CHECK(results[3].strComment.empty());
-    BOOST_CHECK(results[4].nTime == 1333333330);
+    BOOST_CHECK(results[4].nTime == 1139,69,19139,69,19330);
     BOOST_CHECK(results[4].strComment.empty());
-    BOOST_CHECK(results[5].nTime == 1333333334);
+    BOOST_CHECK(results[5].nTime == 1139,69,19139,69,19334);
     BOOST_CHECK(6 == vpwtx[1]->nOrderPos);
 }
 
