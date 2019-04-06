@@ -606,7 +606,7 @@ color:#139,69,19;
 }
 
 QDialog#SignVerifyMessageDialog QPushButton#clearButton_VM:pressed {
-border:1px solid #CD853F;
+border:1px solid rgb(214, 133, 52);
 }
 
 /**************************** SEND AND RECEIVE DIALOG ***********************************/

@@ -108,7 +108,7 @@ public:
         nTargetSpacing = 1 * 60;  // MintWorldCoin: 1 minute
         nLastPOWBlock = 525600;
         nMaturity = 43200;
-        nMasternodeCountDrift = 10;
+        nMasternodeCountDrift = 20;
         nMasternodeCollateralLimit = 1000000000000;
         nModifierUpdateBlock = 1440;
         nMaxMoneyOut = 2100000000000000 * COIN;
