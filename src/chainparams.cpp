@@ -97,7 +97,7 @@ public:
         pchMessageStart[3] = 0x3b;
         vAlertPubKey = ParseHex("041babfe7f012d2a85edac110ebdfaff0f4c5fdea78ec811703d921de824d5979eea2aea703b15bda37c7add3248fb85f89a5c45cfafe85b78af33905613a95a52");
         nDefaultPort = 39777;
-        bnProofOfWorkLimit = ~uint256(0) >> 2; // MintWorldCoin starting difficulty is 1 / 2^12
+        bnProofOfWorkLimit = ~uint256(0) >> 1; // MintWorldCoin starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 210000;
         nMaxReorganizationDepth = 100;
         nEnforceBlockUpgradeMajority = 8100;
@@ -108,7 +108,7 @@ public:
         nTargetSpacing = 1 * 60;  // MintWorldCoin: 1 minute
         nLastPOWBlock = 525600;
         nMaturity = 43200;
-        nMasternodeCountDrift = 20;
+        nMasternodeCountDrift = 10;
         nMasternodeCollateralLimit = 1000000000000;
         nModifierUpdateBlock = 1440;
         nMaxMoneyOut = 2100000000000000 * COIN;
